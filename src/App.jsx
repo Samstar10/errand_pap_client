@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import SignUp from './pages/SignUp.jsx'
+import SignIn from './pages/SignIn.jsx'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       <Routes>
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </>
   )
