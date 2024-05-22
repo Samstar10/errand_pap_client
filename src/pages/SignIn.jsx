@@ -19,7 +19,11 @@ export default function SignIn() {
         
         try{
             const response = await axios
-            .post("http://localhost:8000/auth/api/token/", payload)
+            .post("http://localhost:8000/auth/api/token/", payload, {
+                headers: {
+                    "Content-Type": "multipart/form-data"
+                }
+            })
             .then((response) => {
                 console.log(response)
                 login(response.access, response.refresh)
