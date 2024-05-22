@@ -19,6 +19,8 @@ const AuthProvider = ({ children }) => {
 
         localStorage.setItem('token', token)
         localStorage.setItem('refreshToken', refreshToken)
+        // console.log('Logged in:', { token, refreshToken });
+        console.log(authState.isAuthenticated)
     }
 
     const logout = () => {

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 export default function SignIn() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const { login, isAuthenticated } = useContext(AuthContext)
+    const { login, authState } = useContext(AuthContext)
     const navigate = useNavigate()
 
     const payload = new FormData()
@@ -30,7 +30,7 @@ export default function SignIn() {
 
                 login(response.data.access, response.data.refresh)
 
-                console.log(isAuthenticated)
+                console.log(authState.isAuthenticated)
 
                 navigate("/orders")
             }
