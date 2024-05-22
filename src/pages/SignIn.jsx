@@ -30,7 +30,7 @@ export default function SignIn() {
 
                 login(response.data.access, response.data.refresh)
 
-                console.log(authState.isAuthenticated)
+                console.log(authState.token)
 
                 navigate("/orders")
             }

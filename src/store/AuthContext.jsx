@@ -50,6 +50,7 @@ const AuthProvider = ({ children }) => {
                     token: data.access
                 }))
                 localStorage.setItem('token', data.access)
+                console.log('Token refreshed')
             } else {
                 logout()
             }
@@ -69,6 +70,8 @@ const AuthProvider = ({ children }) => {
                 refreshToken,
                 isAuthenticated: true
             })
+
+            console.log('Auth state initialized from local storage');
         }
     }, [])
 
