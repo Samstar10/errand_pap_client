@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
         localStorage.setItem('token', token)
         localStorage.setItem('refreshToken', refreshToken)
         // console.log('Logged in:', { token, refreshToken });
-        console.log(authState.isAuthenticated)
+        console.log(authState)
     }
 
     const logout = () => {
@@ -37,7 +37,7 @@ const AuthProvider = ({ children }) => {
     const refreshToken = useCallback(async() => {
         try{
             const response = await axios.post("http://localhost:8000/auth/api/token/refresh/", {
-                token: authState.refreshToken
+                refresh: authState.refreshToken
             }, {
                 headers: {
                     "Content-Type": "multipart/form-data"
@@ -66,8 +66,8 @@ const AuthProvider = ({ children }) => {
         const refreshToken = localStorage.getItem('refreshToken')
         if(token && refreshToken) {
             setAuthState({
-                token,
-                refreshToken,
+                token: token,
+                refreshToken: refreshToken,
                 isAuthenticated: true
             })
 
