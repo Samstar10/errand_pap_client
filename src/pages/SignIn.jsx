@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 export default function SignIn() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const { login } = useContext(AuthContext)
+    const { login, isAuthenticated } = useContext(AuthContext)
     const navigate = useNavigate()
 
     const payload = new FormData()
@@ -24,20 +24,20 @@ export default function SignIn() {
                     "Content-Type": "multipart/form-data"
                 }
             })
-            .then((response) => {
-                console.log(response)
-                login(response.access, response.refresh)
-                navigate('/orders')
-            })
             
-            .catch((error) => {
-                console.log('Login error', error)
-            })
-            console.log(response)
+            if(response.status === 200) {
+                console.log(response)
+
+                login(response.data.access, response.data.refresh)
+
+                console.log(isAuthenticated)
+
+                navigate("/orders")
+            }
         }
 
         catch (error) {
-            console.log(error)
+            console.log('Login failed ',error)
         }
     }
 
