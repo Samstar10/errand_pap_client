@@ -1,11 +1,13 @@
 import { useContext, useState } from "react"
 import { AuthContext } from "../store/AuthContext"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 export default function SignIn() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const { login } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const payload = new FormData()
 
@@ -21,10 +23,13 @@ export default function SignIn() {
             .then((response) => {
                 console.log(response)
                 login(response.access, response.refresh)
+                navigate('/orders')
             })
+            
             .catch((error) => {
                 console.log('Login error', error)
             })
+            console.log(response)
         }
 
         catch (error) {
