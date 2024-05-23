@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import VectorImage from '../assets/images/Vector.png'
+import ButtonSuccess from './common/layout/specific/ButtonSuccess'
 
 export default function HomeNav() {
     return (
@@ -17,7 +18,7 @@ export default function HomeNav() {
             </div>
 
             <div className='flex gap-6'>
-                <button className='bg-[#b9ff66] py-5 px-9 rounded-2xl text-xl'>Login</button>
+                <ButtonSuccess>Login</ButtonSuccess>
                 <button className='border-2 border-[#191a23] py-5 px-9 rounded-2xl text-xl'>Sign Up</button>
             </div>
         </div>
