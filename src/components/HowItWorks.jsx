@@ -81,7 +81,7 @@ export default function HowItWorks() {
                 <div></div>
             </div>
 
-            <div className="border-[1px] border-b-8 border-[#191a23] rounded-[45px] px-14 py-10 bg-[#f3f3f3] hover:bg-[#b9ff66]">
+            <div className="border-[1px] border-b-8 border-[#191a23] rounded-[45px] px-14 py-10 bg-[#f3f3f3] hover:bg-[#b9ff66] mb-20">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-5">
                         <h4 className="text-6xl font-medium">06</h4>
