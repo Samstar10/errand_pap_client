@@ -2,7 +2,7 @@ import HomeNav from "../components/HomeNav"
 
 export default function Home() {
     return (
-        <div>
+        <div className="px-6">
             <HomeNav />
         </div>
     )
