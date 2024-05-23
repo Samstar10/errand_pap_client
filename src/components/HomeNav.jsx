@@ -19,7 +19,7 @@ export default function HomeNav() {
 
             <div className='flex gap-6'>
                 <ButtonSuccess>Login</ButtonSuccess>
-                <button className='border-2 border-[#191a23] py-5 px-9 rounded-2xl text-xl'>Sign Up</button>
+                <button className='border-[1px] border-[#191a23] py-5 px-9 rounded-2xl text-xl'>Sign Up</button>
             </div>
         </div>
     )
