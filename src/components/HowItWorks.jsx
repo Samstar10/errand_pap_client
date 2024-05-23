@@ -5,7 +5,7 @@ export default function HowItWorks() {
     return (
         <div className="px-6">
             <div className="flex items-center gap-10 mb-20 mt-10">
-                <div className="bg-[#b9ff66] px-2 rounded-lg text-center w-1/5">
+                <div className="bg-[#b9ff66] px-2 rounded-lg text-center">
                     <h2 className="text-[2.5rem] font-medium">How it works</h2>
                 </div>
                 <p className="w-3/5 text-lg">Discover the simplicity of having your essentials delivered right to your door. Follow these easy steps to enjoy a seamless shopping experience:</p>

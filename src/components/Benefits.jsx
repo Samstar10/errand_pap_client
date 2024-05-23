@@ -3,9 +3,9 @@ import Line from "../assets/images/Line 4.png"
 
 export default function Benefits() {
     return (
-        <div className="px-6">
+        <div className="px-6 mb-20">
             <div className="flex items-center gap-10 mb-20 mt-10">
-                <div className="bg-[#b9ff66] px-2 rounded-lg text-center w-2/12">
+                <div className="bg-[#b9ff66] px-2 rounded-lg text-center">
                     <h2 className="text-[2.5rem] font-medium">Benefits</h2>
                 </div>
                 <p className="w-3/5 text-lg">Experience the ultimate convenience and a range of advantages with ErrandsPap. Here’s why our service is the perfect solution for your everyday needs:</p>
